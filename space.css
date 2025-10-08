@@ -1,0 +1,16 @@
+.space {
+
+
+  &.S {
+    height: 0.7em;
+  }
+  &.M {
+    height: 1.4em;
+  }
+  &.L {
+    height: 2.4em;
+  }
+  &.XL {
+    height: 4em;
+  }
+}

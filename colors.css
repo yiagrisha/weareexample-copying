@@ -1,0 +1,10 @@
+:root {
+  --text-RGB:        14, 22, 35;
+  --link-RGB:        0, 100, 240;
+  --hover-RGB:       0, 200, 0;
+  --accent-RGB:      253, 47, 75;
+  --code-RGB:        115, 120, 125;
+  --mark-RGB:        255, 225, 0;
+  --surface-RGB:     255, 255, 255;
+  --background-RGB:  243, 243, 240;
+}
