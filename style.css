@@ -218,6 +218,26 @@ a {
   }
 }
 
+.block-finnale {
+  width: 100%;
+  padding-top: 0.5em;
+
+  h3 {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-size: 0.6em;
+  }
+  p {
+    width: 100%;
+    text-align: center;
+
+    font-size: 0.5em;
+    font-style: italic;
+  }
+}
+
 #works {
   flex-direction: column;
 
@@ -314,7 +334,7 @@ a {
         flex-direction: column;
         justify-content: flex-end;
         justify-content: space-between;
-        
+
         width: 100%;
 
         :nth-child(2) {
@@ -392,10 +412,195 @@ a {
 }
 
 #capturing-attention {
-  background-image: url('./public/Images/1.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
+  display: block;
 
-  height: 100vh;
+  padding: 0;
+
+  
+  #capturing-attention-grid {
+    color: rgb(var(--surface-RGB));
+    height: 100vh;
+    padding: 0.7em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-image: url('./public/Images/1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    #left {
+      width: 20em;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+
+      :nth-child(1) {
+        h3 {
+          text-transform: uppercase;
+          font-size: 0.7em;
+        }
+        p {
+          font-style: italic;
+          font-size: 0.5em;
+        }
+      }
+      :nth-child(2) {
+        h1 {
+          text-transform: uppercase;
+          font-size: 1.5em;
+          line-height: 0.8em;
+          padding-bottom: 0.5em;
+        }
+        p {
+          font-size: 0.9em;
+          line-height: 1.1em;
+        }
+      }
+
+    }
+    #right {
+      width: 15em;
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        height: fit-content;
+        border-left: 1px rgb(var(--surface-RGB)) solid;
+        padding-left: 0.8em;
+        width: 5em;
+        overflow: visible;
+
+
+        h3 {
+          text-transform: uppercase;
+          font-size: 0.7em;
+          padding-bottom: 3em;
+        }
+
+        a {
+          color: rgb(var(--surface-RGB));
+          display: block;
+          position: relative;
+          width: fit-content;
+          
+          p {
+            font-size: 0.8em;
+            line-height: 1.1em;
+            width: fit-content;
+            white-space: nowrap;
+
+            transition: all 0.2s ease;
+          }
+          svg {
+            fill: rgb(var(--surface-RGB));
+            width: 0.7em;
+            height: 100%;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+
+            transition: all 0.2s ease;
+          }
+
+          &:hover {
+            p {
+              padding-left: 1em;
+              transition: all 0.2s ease;
+            }
+
+            svg {
+              display: inline;
+              transition: all 0.2s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#clued-up {
+  display: block;
+
+  height: 40em;
+  align-items: center;
+  align-content: center;
+
+  padding: 7em;
+
+  
+  h1 {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 3.7em;
+    line-height: 0.8em;
+  }
+  .clued-slider {
+    display: inline-block;
+    width: 5em;
+    height: 2.5em;
+
+    position: relative;
+    
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border: 1px solid black;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      border-right: none;
+      border-bottom: none;
+      border-radius: 3px 0 0 0;
+    }
+
+    &::after {
+      top: 0;
+      right: 0;
+      border-left: none;
+      border-bottom: none;
+      border-radius: 0 3px 0 0;
+    }
+
+    i {
+      position: absolute;
+      inset: 0;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border: 1px solid black;
+      }
+      
+      &::before {
+        bottom: 0;
+        left: 0;
+        border-right: none;
+        border-top: none;
+        border-radius: 0 0 0 3px;
+      }
+
+      &::after {
+        bottom: 0;
+        right: 0;
+        border-left: none;
+        border-top: none;
+        border-radius: 0 0 3px 0;
+      }
+    }
+  }
 }
