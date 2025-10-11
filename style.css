@@ -751,10 +751,13 @@ a {
 #etcetera {
   gap: 2%;
   align-items: flex-start;
+  position: relative;
 
 
   #etcetera-text {
-    position: relative;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
 
     display: flex;
     flex-direction: column;
@@ -902,9 +905,53 @@ a {
 }
 
 #fine-form-podcast {
-      background-image: url('./public/Images/podcast.jpg');
+    background-image: url('./public/Images/podcast.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    padding: 5em;
+    justify-content: right;
+
+    div {
+      color: rgb(var(--background-RGB));
+
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+
+      width: 24em;
+
+
+      h1 {
+        text-transform: uppercase;
+        font-size: 5em;
+
+        line-height: 0.8em;
+
+        margin-bottom: 0.2em;
+      }
+      p {
+        font-size: 1em;
+      }
+
+      a {
+        color: rgb(var(--background-RGB));
+
+
+        display: flex;
+        align-items: center;
+        gap: 0.2em;
+
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.9em;
+
+        svg {
+          fill: rgb(var(--background-RGB));
+          width: 0.7em;
+        }
+      }
+    }
 
 }
