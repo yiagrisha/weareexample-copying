@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.7"
+            android:text="@string/subtitle"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_card"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Настройка -->
+        <LinearLayout
+            android:id="@+id/setup_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView style="@style/SectionTitle" android:text="@string/setup_title" />
+
+            <TextView style="@style/Body" android:text="@string/setup_step1" />
+
+            <Button
+                android:id="@+id/btn_accessibility"
+                style="@style/Btn"
+                android:text="@string/btn_accessibility" />
+
+            <TextView style="@style/Body" android:layout_marginTop="12dp" android:text="@string/setup_step2" />
+
+            <Button
+                android:id="@+id/btn_restricted"
+                style="@style/Btn"
+                android:text="@string/btn_restricted" />
+        </LinearLayout>
+
+        <!-- Функции -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView style="@style/SectionTitle" android:text="@string/features_title" />
+
+            <Switch android:id="@+id/sw_custom_nav" style="@style/Sw" android:text="@string/sw_custom_nav" />
+            <TextView style="@style/Hint" android:text="@string/sw_custom_nav_hint" />
+
+            <Switch android:id="@+id/sw_block_tab" style="@style/Sw" android:text="@string/sw_block_tab" />
+            <TextView style="@style/Hint" android:text="@string/sw_block_tab_hint" />
+
+            <Switch android:id="@+id/sw_single_reel" style="@style/Sw" android:text="@string/sw_single_reel" />
+            <TextView style="@style/Hint" android:text="@string/sw_single_reel_hint" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_open_ig"
+            style="@style/Btn"
+            android:layout_marginTop="16dp"
+            android:text="@string/btn_open_ig" />
+
+        <!-- Диагностика -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView style="@style/SectionTitle" android:text="@string/debug_title" />
+
+            <Switch android:id="@+id/sw_debug" style="@style/Sw" android:text="@string/sw_debug" />
+            <TextView style="@style/Hint" android:text="@string/sw_debug_hint" />
+
+            <Button
+                android:id="@+id/btn_share"
+                style="@style/Btn"
+                android:text="@string/btn_share" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:alpha="0.5"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

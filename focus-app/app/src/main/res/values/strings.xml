@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FocusGuard</string>
+    <string name="service_label">FocusGuard — меньше рилсов</string>
+    <string name="service_description">Убирает вкладку Reels из нижнего меню Инстаграма и не даёт листать ленту рилсов. Рилс, присланный в директ, можно посмотреть — но только один.</string>
+
+    <string name="title">FocusGuard</string>
+    <string name="subtitle">Инстаграм без ленты рилсов</string>
+    <string name="status_on">✅ Служба включена и работает</string>
+    <string name="status_off">⚠️ Служба выключена — выполни шаги ниже</string>
+
+    <string name="setup_title">Настройка (один раз)</string>
+    <string name="setup_step1">1. Нажми кнопку ниже и включи FocusGuard. Если переключатель серый и не нажимается — сделай шаг 2, а потом вернись к шагу 1.</string>
+    <string name="btn_accessibility">Открыть «Спец. возможности»</string>
+    <string name="setup_step2">2. Откроется страница приложения. Нажми ⋮ в правом верхнем углу → «Разрешить ограниченные настройки» (Allow restricted settings) и подтверди.</string>
+    <string name="btn_restricted">Открыть «О приложении»</string>
+
+    <string name="features_title">Функции</string>
+    <string name="sw_block_tab">Не пускать во вкладку Reels</string>
+    <string name="sw_block_tab_hint">Если она всё-таки откроется — сразу вернёт на главную</string>
+    <string name="sw_single_reel">Только один рилс</string>
+    <string name="sw_single_reel_hint">Рилс из директа (или из ленты) можно посмотреть, но при попытке листать дальше — возврат назад</string>
+    <string name="sw_custom_nav">Ровное меню без Reels</string>
+    <string name="sw_custom_nav_hint">Рисует поверх нижнего меню Инстаграма своё — из 4 иконок, без дырки</string>
+
+    <string name="debug_title">Если что-то не работает</string>
+    <string name="sw_debug">Кнопка «DUMP» в Инстаграме</string>
+    <string name="sw_debug_hint">Показывает красную кнопку. Нажми её на проблемном экране — приложение запомнит, как этот экран устроен (тексты длиннее 24 символов скрываются)</string>
+    <string name="btn_share">Отправить диагностику</string>
+    <string name="btn_open_ig">Открыть Инстаграм</string>
+
+    <string name="toast_reels_blocked">Reels отключены 🙂</string>
+    <string name="toast_single_reel">Только один рилс 🙂</string>
+</resources>
