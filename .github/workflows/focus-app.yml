@@ -31,11 +31,14 @@ jobs:
           chmod +x gradlew
           ./gradlew --no-daemon assembleRelease
           cp app/build/outputs/apk/release/app-release.apk FocusGuard.apk
+          cp feed/build/outputs/apk/release/feed-release.apk FocusFeed.apk
 
       - uses: actions/upload-artifact@v4
         with:
-          name: FocusGuard-apk
-          path: focus-app/FocusGuard.apk
+          name: apks
+          path: |
+            focus-app/FocusGuard.apk
+            focus-app/FocusFeed.apk
 
       - name: Publish release (download link for the phone)
         uses: softprops/action-gh-release@v2
@@ -44,7 +47,11 @@ jobs:
           name: FocusGuard 0.1.${{ github.run_number }}
           target_commitish: ${{ github.sha }}
           make_latest: true
-          files: focus-app/FocusGuard.apk
+          files: |
+            focus-app/FocusGuard.apk
+            focus-app/FocusFeed.apk
           body: |
-            Скачай **FocusGuard.apk** ниже на телефоне и установи поверх старой версии.
+            **FocusFeed.apk** — Инстаграм без лишнего (сайт внутри приложения).
+            **FocusGuard.apk** — ограничитель для официального приложения Инстаграма.
+            Новые версии ставятся поверх старых.
             Branch: ${{ github.ref_name }}, commit ${{ github.sha }}

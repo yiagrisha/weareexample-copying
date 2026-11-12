@@ -1,0 +1,31 @@
+/*
+ * FocusFeed — что прячем на instagram.com.
+ * Это обычный CSS: можно править и дописывать свои правила.
+ * Скрипт clean.js ставит на <html> атрибут data-fg-route с текущим разделом:
+ *   home, explore, direct, stories, post, profile-ish (other)
+ * — по нему можно писать правила для конкретного экрана.
+ */
+
+/* Баннеры «Скачайте приложение» */
+a[href*="apps.apple.com"],
+a[href*="play.google.com"],
+a[href*="itunes.apple.com"] {
+    display: none !important;
+}
+
+/* Ссылка на ленту Reels */
+a[href="/reels/"] {
+    display: none !important;
+}
+
+/* Threads */
+a[href*="threads.net"],
+a[href*="threads.com"] {
+    display: none !important;
+}
+
+/* Поиск: прячем сетку рекомендаций, остаётся только строка поиска и результаты */
+html[data-fg-route="explore"] main a[href*="/p/"],
+html[data-fg-route="explore"] main a[href*="/reel/"] {
+    display: none !important;
+}

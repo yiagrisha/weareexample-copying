@@ -14,3 +14,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "FocusGuard"
 include(":app")
+include(":feed")

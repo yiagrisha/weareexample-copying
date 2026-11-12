@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="FeedTheme" parent="android:Theme.DeviceDefault.DayNight.NoActionBar">
+        <item name="android:colorAccent">#405DE6</item>
+    </style>
+</resources>
