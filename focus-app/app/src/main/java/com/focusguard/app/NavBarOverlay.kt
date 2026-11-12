@@ -107,13 +107,13 @@ class NavBarOverlay(
         title = "FocusGuard nav bar"
     }
 
-    private fun build(items: List<Item>, background: Int): LinearLayout {
-        val fg = if (isLight(background)) Color.BLACK else Color.WHITE
+    private fun build(items: List<Item>, bgColor: Int): LinearLayout {
+        val fg = if (isLight(bgColor)) Color.BLACK else Color.WHITE
         val iconSize = dp(26)
         val bar = LinearLayout(context).apply {
             orientation = LinearLayout.HORIZONTAL
             gravity = Gravity.CENTER_VERTICAL
-            setBackgroundColor(background)
+            setBackgroundColor(bgColor)
             // Нажатия между иконками не должны «проваливаться» в Инстаграм.
             isClickable = true
         }
